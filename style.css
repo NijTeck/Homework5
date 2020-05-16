@@ -70,3 +70,22 @@ body {
     transition: all .3s ease-in-out;
   }
   
+  .modal-container {
+  position: fixed;
+  left: 0; 
+  width: 100%;
+  top: 0; 
+  z-index: 1;
+  overflow: auto; 
+  background-color: green; 
+  background-color: gray;
+  display: none;
+}
+
+.modal {
+  border: 1px solid gray;
+  margin: 20% auto;
+  background-color: white;
+  width: 80%;
+  padding: 25px;
+}

@@ -5,7 +5,8 @@ $(function() {
 
     let d = new Date();
 
-    // SETTING THE YEAR TO  
+    // SETTING THE YEAR, MONTH AND DATE  TO  SHOW UP ON THE TOP OF THE PAGE
+
     let toYear = d.getFullYear();
     let toMonth = d.getMonth()+1;
     let toDay = d.getDate();
@@ -16,6 +17,11 @@ $(function() {
 
 $('.date').text(`${output}`)
 
+// 
+ 
+// opt[value='$@5 AM']{$@5 AM}*7;
+
+console.log(modal-end);
 
 //GIVEN I am using a daily planner to create a schedule
 //WHEN I open the planner
