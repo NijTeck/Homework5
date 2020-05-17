@@ -18,10 +18,21 @@ $(function() {
 $('.date').text(`${output}`)
 
 // 
- 
+// 
+
+$('.moal-container').toggle();
+
+// Displaying the modal container for our page. 
+
+$('.modal-container--close').click(function() {
+
+    $('.modal-container').css('display', 'none');
+}) 
+
+
 // opt[value='$@5 AM']{$@5 AM}*7;
 
-console.log(modal-end);
+
 
 //GIVEN I am using a daily planner to create a schedule
 //WHEN I open the planner
