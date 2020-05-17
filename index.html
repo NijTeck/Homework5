@@ -47,31 +47,18 @@
     <div class='calendar-container'>
       <h2 class='date'></h2>
       <div class='calendar'>
-        
-
-          <div class="Planner">
-
-          <div class="row">
-            <div class="column" style="background-color:#aaa;">
-              <h2>TIME</h2>
-          
-            </div>
-            <div class="column" style="background-color:#bbb;">
-              <h2>PLAN_NOW</h2>
-          
-            </div>
-            <div class="column" style="background-color:#ccc;">
-              <h2>Save</h2>
-          
-            </div>
+          <div class='empty'></div>
+          <div class='planNow'>
+              <div class="col col-1">Leonard</div>
+              <div class="col col-2" style="float: right;" >Save</div>
           </div>
 
-
+ 
           <!-- Just creating mutiple row for all time set out on the time section. -->
 
           <div class="times">
-<DIV> </DIV>
-              <div class="row row-1" >5 AM</div>
+              <div class="row row-1">4 AM</div>
+              <div class="row row-1">5 AM</div>
               <div class="row row-2">6 AM</div>
               <div class="row row-3">7 AM</div>
               <div class="row row-4">8 AM</div>
@@ -91,19 +78,12 @@
           </div>
 
 
-    <!--div class="schedule-container">
-      < Timeblocks go here >
 
-      <h2 class="date"></h2>
-      <div class="schedule"> </div>
-      <div class="planner">
-        <div class="col col-1"> Leonard </div>
-          
-      </div-->
+      <!-- setting the content div -->
 
 
-      
-                  <div class="timeVar">
+
+      <div class="content">
                     <div id="1"></div>
                     <div id="2"></div>
                     <div id="3"></div>
@@ -273,33 +253,25 @@
                     <div id="167"></div>
                     <div id="168"></div>
                 </div>
-
-
       <!-- Adding BootStrap Modal  to triggle hidden contents  ( info and code pulled from https://getbootstrap.com/docs/4.0/components/modal/)-->
 
-      <div class="modal-container"> <!--tabindex="-1" role="dialog"-->
-        <span class='modal-container--close'>&times;</span>
-        <div class="modal-dialog" role="document">
-
-   
-          <form class="modal-content">
-
-            <form class='modal-container--form'>
-            <label class="modal-start"> Start </label>
-            <select id='modal-start'> </select>
-            
-            <label class="modal-end"> End </label>
-            <select id='modal-end'> </select>
 
 
               <!--button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-              </button-->
+              </button -->
 
 
+    <div class="schedule-container">
+      <h2 class="date"></h2>
+      <div class="schedule"> </div>
+      <div class="planner">
+  
+          
    <!-- CREATING A MODAL START TIME OPTIONS-->
 
               <select id='modal-start'>
+                <option value="4 AM" >4 AM</option>
                 <option value="5 AM" >5 AM</option>
                 <option value="6 AM" >6 AM</option>
                 <option value="7 AM" >7 AM</option>
@@ -321,6 +293,7 @@
   <!-- CREATING A MODAL END TIME OPTIONS-->
 
               <select id='modal-end'>
+                <option value="4 AM" >4 AM</option>
                 <option value="5 AM" >5 AM</option>
                 <option value="6 AM" >6 AM</option>
                 <option value="7 AM" >7 AM</option>

@@ -28,6 +28,7 @@ $('.moal-container').toggle();
 $('.modal-container--close').click(function() {
 
     $('.modal-container').css('display', 'none');
+    let row = 0, length = 1, column = 0
 }) 
 
 
@@ -53,7 +54,7 @@ let lenght = 0;
 ///////////////// Regex Expressions //////////////////////////////
 //// Drawing Idea from https://www.rexegg.com/regex-quickstart.html/////
 
-colume = e.target.planes.match(/\d+/) [0];
+colume = e.target.planes.match(/\d+/) [0]; // Pulled info also from  https://medium.com/@aleks.roslyakov/using-css-grid-jquery-making-a-daily-scheduler-pt-ii-7af7d239a55d
 
 
 ///////////////// Regex Expressions Ends /////////////////////////
@@ -79,27 +80,31 @@ let timeObj = {
 "7 PM " : 15,
 "8 PM " : 16,
 "9 PM " : 17,
-
-
-
-
-
-
-
-
-
+"10 PM" : 18,
+"11 PM" : 19,
+"12 AM" : 20,
+"1 AM" : 21,
+"2 AM" : 22,
+"3 AM" : 23,
+"4 AM" : 24
 }
-//THEN each timeblock is color coded to indicate whether it is in the past,       present, or future
-//WHEN I click into a timeblock
 
-//THEN I can enter an event
-//WHEN I click the save button for that timeblock
 
-//THEN the text for that event is saved in local storage
-//WHEN I refresh the page
+// PUll some code snip from   https://medium.com/@aleks.roslyakov/using-css-grid-jquery-making-a-daily-scheduler-pt-ii-7af7d239a55d
+// Because the INFO directly relates to what I was trying to achieve. 
 
-//THEN the saved events persist
+column = e.target.className.match(/\d+/)[0]
 
-});
+        $('.modal-container').toggle()
+
+        $('.modal-container--close').click(function(){
+            $('.modal-container').css('display', 'none')
+        })
+        
+        $('.modal-container--form').submit(function(e){
+            e.preventDefault()
+
+length = (timeObj[$( "#end-select" ).val()]) - (timeObj[$( "#start-select" ).val()])
+
 
 })
