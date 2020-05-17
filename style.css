@@ -32,7 +32,8 @@ body {
   
   .row {
     white-space: pre-wrap;
-    height: 80px;
+    background-color: rgb(192, 187, 187);
+    height: 70px;
     border-top: 1px solid white;;
   }
   
@@ -69,4 +70,20 @@ body {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
+
+  .empty {
+    display: grid;
+    grid-area: empty;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
   
+
+.times > div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
