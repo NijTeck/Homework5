@@ -40,13 +40,9 @@ $(function() {
 
     $('.date').text(`${output}`)
 
-
-
-
-
 })
 
-$(".calendar-container").click(function(e) {
+$(".planNow").click(function(e) {
 
     let row = 0,
         length = 1,
@@ -54,7 +50,6 @@ $(".calendar-container").click(function(e) {
 
 
     let timeObj = {
-        "5 AM": 1,
         "6 AM": 2,
         "7 AM": 3,
         "8 AM": 4,
@@ -68,28 +63,37 @@ $(".calendar-container").click(function(e) {
         "4 PM": 12,
         "5 PM": 13,
         "6 PM": 14,
-        "7 PM": 15,
-        "8 PM": 16,
+    
+    
     }
 
     //http://www.rexegg.com/regex-quickstart.html
+// PUll some code snip from   https://medium.com/@aleks.roslyakov/using-css-grid-jquery-making-a-daily-scheduler-pt-ii-7af7d239a55d
+// Because the INFO directly relates to what I was trying to achieve. 
 
-    column = e.target.className.match(/\d+/)[0]
 
-    $('.modal-container').toggle();
+column = e.target.className.match(/\d+/)[0]
 
-    $('.modal-container--close').click(function() {
-        $('.modal-container').css('display', 'none')
-    });
+$('.modal-container').toggle()
 
-    $('.modal-container--form').submit(function(e) {
-        e.preventDefault();
+$('.modal-container--close').click(function(){
+    console.log("click");
 
-        row = timeObj[$("#start-select").val()];
-        length = (timeObj[$("#end-select").val()]) - (timeObj[$("#start-select").val()]);
-        $('.content').append(`<div class='event' style='grid-row:${row}/span ${length};grid-column:${column};background-color: yellow;'>Reservation</div>`);
-        $('.modal-container--form')[0].reset();
-        $('.modal-container--form').off();
-        $('.calendar-container').toggle();
-    })
+    $('.modal-container').css('display', 'none')
+    console.log("clickew");
+})
+
+$('.modal-container--form').submit(function(e){
+    console.log("clickd");
+    e.preventDefault()
+   
+    row = timeObj[$( "#start-select" ).val()]
+    console.log("clisfck");
+    
+    length = (timeObj[$( "#end-select" ).val()]) - (timeObj[$( "#start-select" ).val()])
+    $('.content').append(`<div class='event' style='grid-row:${row}/span ${length};grid-column:${column};background-color: yellow;'>Reservation</div>`)
+    $('.modal-container--form')[0].reset()
+    $('.modal-container--form').off()
+    $('.modal-container').toggle()
+})
 });
