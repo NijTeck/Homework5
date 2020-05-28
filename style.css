@@ -1,17 +1,32 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+
 .calendar {
     display: grid;
-    grid-template-areas: "empty    planes" "time contents";
+    grid-template-areas: 
+    "empty    planes"
+    "time contents";
     grid-template-columns: 120px;
     grid-template-rows: 60px;
-    width: 70%;
-    height: 30px;
+    width: 95vw;
+    height: 95vh;
     margin: 0 auto;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.20);
 }
 
-.calender-container {
-    margin-bottom: 35px;
+#field {
+    width: 55px;
+    height: 30px;
+    font-size: 20px;
+    
+
 }
+
 .empty {
     display: grid;
     grid-area: empty;
@@ -21,112 +36,99 @@
 }
 
 .planNow {
-    float: justify;
     grid-area: planes;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     text-transform: uppercase;
     font-size: 12px;
     background-color: #E4F1FD;
-    border-bottom: 1px solid rgbablack border-left: 1px solid rgbablack border-top: 1px solid rgbablack
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .planNow > div {
-display: grid;
-align-items: center;
-justify-content: center;
-border-right: 1px solid rgba(0, 0, 0, 0.25);
+    display: span;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.times {
+.timeTags {
     grid-area: time;
     display: grid;
-    grid-template-rows: repeat(24, 1fr);
+    grid-template-rows: repeat(10, 10fr); 
     font-size: 14px;
     background-color: #F7F7F7;
-    border-left: 1px solid rgbablack;
-    grid-auto-rows: repeat;
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.times>div {
+.timeTags > div {
     display: grid;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid rgbablack
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.content {
+.content-container {
     position: relative;
     grid-area: contents;
     display: grid;
-    grid-template-rows: repeat(15, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     grid-template-columns: repeat(1, 1fr);
     border-right: 1px solid rgba(0, 0, 0, 0.25);
     grid-auto-flow: column;
-    width: 80%;
-    height: 70px;
-    margin-left: 90px;
-    margin-right: 10px;
-    margin-top: 2px;
+ 
 }
 
-.content>div {
+.content-container > div {
     border-left: 1px solid rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .event {
-    padding-top: 10px;
-    font-size: 16px;
+    padding-top: 8px;
+    font-size: 14px;
     position: absolute;
-    background-color: rgb(48, 40, 160);
-    height: 100%;
+    background-color: rgb(179, 179, 139);
+    height: 80%;
 }
-.content > div:nth-child(even) {
+
+.content-container > div:nth-child(even) {
     background-color: #F7F7F7;
 }
 
-.times {
-    background-color: rgb(247, 238, 238);
-    width: 100%;
-    height: 70px;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 2px;
-}
-
-.modal-container {
-    display: none;
-    position: fixed;
-    z-index: 1;
+.schedule-container {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-    margin-bottom: 35px;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
 }
 
 .modal {
     background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 
-.modal-container--close {
+.schedule-container--close {
     color: #aaa;
     float: right;
-    font-size: 38px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: bold
 }
 
-.modal-container--close:hover,
-.modal-container--close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.schedule-container--close:hover,
+.schedule-container--close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
