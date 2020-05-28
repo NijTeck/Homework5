@@ -68,6 +68,11 @@ Step 5:User left click on "2 PM (list item)"
 Step 6:User left click on "Confirm (button)" in "Sch"
 
 
+## CODE CREDITS 
+
+//(Borrowed Ideal from {  https://medium.com/@aleks.roslyakov/using-css-grid-jquery-making-a-daily-scheduler-pt-ii-7af7d239a55d 
+// So both code looks alike, but it was for reference only and  I wrote each lines of the code myself. })
+
 
 
 
